@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="description"	content=""/>
+	<meta name="keywords"		  content=""/>
+	<meta name="author"			  content=""/>
+	<title>SWE30009 - Tutorial 7 Sample Food Cart Application</title>
+	<style>
+        
+        div{
+          max-width: 1200px;
+          width: 100%;
+          margin: 0 auto;
+          position: relative;
+		  overflow: auto; /* or overflow: hidden */
+        }
+        
+        table {
+          border-spacing: 1;
+          border: 1px solid;
+          // border-collapse: collapse;
+          background: white;
+          border-radius: 6px;
+          // overflow: hidden;
+          max-width: 1200px;
+          width: 100%;
+          margin: 0 auto;
+          position: relative;
+        }
+        table * {
+          position: relative;
+        }
+        table td, table th {
+          padding-left: 8px;
+        }
+        table td{
+          height: 80px;
+        }
+        table thead tr {
+          height: 40px;
+          background: #FFED86;
+          font-size: 20px;
+        }
+        table tbody tr {
+          height: 48px;
+          border-bottom: 1px solid #E3F1D5;
+        }
+        table tbody tr:last-child {
+          border: 0;
+        }
+        table td, table th {
+          text-align: left;
+        }
+        table td.l, table th.l {
+          text-align: right;
+        }
+        table td.c, table th.c {
+          text-align: center;
+        }
+        table td.r, table th.r {
+          text-align: center;
+        }
+
+        @media screen and (max-width: 35.5em) {
+          table {
+            display: block;
+          }
+          table > *, table tr, table td, table th {
+            display: block;
+          }
+          table thead {
+            display: none;
+          }
+          table tbody tr {
+            height: auto;
+            padding: 8px 0;
+          }
+          table tbody tr td {
+            padding-left: 45%;
+            margin-bottom: 12px;
+          }
+          table tbody tr td:last-child {
+            margin-bottom: 0;
+          }
+          table tbody tr td:before {
+            position: absolute;
+            font-weight: 700;
+            width: 40%;
+            left: 10px;
+            top: 0;
+          }
+          // table tbody tr td:nth-child(1):before {
+            // content: "Code";
+          // }
+          // table tbody tr td:nth-child(2):before {
+            // content: "Stock";
+          // }
+          // table tbody tr td:nth-child(3):before {
+            // content: "Cap";
+          // }
+          // table tbody tr td:nth-child(4):before {
+            // content: "Inch";
+          // }
+          // table tbody tr td:nth-child(5):before {
+            // content: "Box Type";
+          // }
+        }
+        body {
+          background: #FFF;
+          font: 400 20px "Calibri", "Arial";
+          //padding: 5px;
+		  padding-top: 0px;
+        }
+
+        blockquote {
+          color: white;
+          text-align: center;
+        }
+
+	</style>
+
+</head>
+
+<body>
+    <h2>Confirm your order</h2>
+     <?php
+        $price1 = 8.00;
+        $price2 = 6.00;
+        $price3 = 3.00;
+        $price4 = 2.00;
+        $price5 = 1.00;
+    ?>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Sample image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          
+        </tr>
+      <thead>
+       <tbody>
+        <tr>
+          <td><img src="Burger.jpg" width="100"></td>
+          <td>Burger</td>
+          <td>RM<?php echo number_format($price1, 2); ?></td>
+          <td><?php echo $_POST['qty1']; ?></td>
+          <td>RM<?php $subtotal1 = $price1*$_POST['qty1'];  echo number_format($subtotal1, 2); ?></td>
+        </tr>
+           <tr>
+          <td><img src="FriedRice.jpg" width="100"></td>
+          <td>Fried Rice</td>
+          <td>RM<?php echo number_format($price2, 2); ?></td>
+          <td><?php echo $_POST['qty2']; ?></td>
+          <td>RM<?php $subtotal2 = $price2*$_POST['qty2'];  echo number_format($subtotal2, 2); ?></td>
+        </tr>
+         <tr>
+          <td><img src="RotiCanai.jpg" width="100"></td>
+          <td>Roti Canai</td>
+          <td>RM<?php echo number_format($price3, 2); ?></td>
+          <td><?php echo $_POST['qty3']; ?></td>
+          <td>RM<?php $subtotal3 = $price3*$_POST['qty3'];  echo number_format($subtotal3, 2); ?></td>
+        </tr>
+        <tr>
+          <td><img src="Coffee.jpg" width="100"></td>
+          <td>Coffee</td>
+          <td>RM<?php echo number_format($price4, 2); ?></td>
+          <td><?php echo $_POST['qty4']; ?></td>
+          <td>RM<?php $subtotal4 = $price4*$_POST['qty4'];  echo number_format($subtotal4, 2); ?></td>
+        </tr>
+        <tr>
+          <td><img src="Tea.jpg" width="100"></td>
+          <td>Tea</td>
+          <td>RM<?php echo number_format($price5, 2); ?></td>
+          <td><?php echo $_POST['qty5']; ?></td>
+          <td>RM<?php $subtotal5 = $price5*$_POST['qty5'];  echo number_format($subtotal5, 2); ?></td>
+        </tr>
+     
+      </tbody>
+      
+    </table>
+    
+    <div>
+    <!-- <br> -->
+    
+    <h2 name="total_amount" style="float: right; color:red;">
+    <?php
+        $grand_total = $subtotal1 + $subtotal2 + $subtotal3 + $subtotal4 * $subtotal5;
+        echo number_format($grand_total,2);
+    ?>
+    </h2>
+    <h2 style="float: right; color:red;">&nbsp;RM
+    </h2>
+    <h2 style="float: right;">Total amount to pay:</h2>
+    </div>
+    
+</body>
+    
+</html>
