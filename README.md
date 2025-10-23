@@ -1,5 +1,5 @@
 ## Tutorial 7 - Extended testing workflow using GitHub Actions
-![Selenium Tests](actions/workflows/selenium_tests.yml/badge.svg)
+![Selenium Tests](../../actions/workflows/selenium_tests.yml/badge.svg)
 
 ## Description of Sample Web Application
 A web-based food cart system that allows customers to select food from the menu and add it to the cart. The cart will display the selected food and quantity, as well as the total amount to pay.
