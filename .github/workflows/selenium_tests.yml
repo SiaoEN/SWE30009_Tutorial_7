@@ -86,7 +86,7 @@ jobs:
 
     - name: Run Selenium tests
       run: |
-        python ./tests/activity3_GitHub_Actions.py
+        python ./tests/activity3_GitHub_Actions_XXX.py
         
     - name: Upload test results (optional)
       uses: actions/upload-artifact@v4
