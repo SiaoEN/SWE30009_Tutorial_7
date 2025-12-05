@@ -1,0 +1,201 @@
+div{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+		overflow: hidden;
+  }
+
+table {
+    border-spacing: 1;
+    border: 1px solid;
+    border-collapse: collapse;
+    background: rgb(255, 209, 209);
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+        }
+        table * {
+          position: relative;
+        }
+        table td, table th {
+          padding-left: 8px;
+        }
+        table td{
+          height: 80px;
+        }
+        table thead tr {
+          height: 40px;
+          background: #ffa0a8;
+          font-size: 20px;
+        }
+        table tbody tr {
+          height: 48px;
+          border-bottom: 1px solid #ffa9cb;
+        }
+        table tbody tr:last-child {
+          border: 0;
+        }
+        table td, table th {
+          text-align: left;
+        }
+        table td.l, table th.l {
+          text-align: right;
+        }
+        table td.c, table th.c {
+          text-align: center;
+        }
+        table td.r, table th.r {
+          text-align: center;
+        }
+
+        @media screen and (max-width: 35.5em) {
+          table {
+            display: block;
+          }
+          table > *, table tr, table td, table th {
+            display: block;
+          }
+          table thead {
+            display: none;
+          }
+          table tbody tr {
+            height: auto;
+            padding: 8px 0;
+          }
+          table tbody tr td {
+            padding-left: 45%;
+            margin-bottom: 12px;
+          }
+          table tbody tr td:last-child {
+            margin-bottom: 0;
+          }
+          table tbody tr td:before {
+            position: absolute;
+            font-weight: 700;
+            width: 40%;
+            left: 10px;
+            top: 0;
+          }
+          table tbody tr td:nth-child(1):before {
+           content: "Code";
+          }
+          table tbody tr td:nth-child(2):before {
+           content: "Stock";
+          }
+          table tbody tr td:nth-child(3):before {
+            content: "Cap";
+          }
+          table tbody tr td:nth-child(4):before {
+            content: "Inch";
+          }
+          table tbody tr td:nth-child(5):before {
+            content: "Box Type";
+          }
+        }
+
+        body {
+          background: #aeebff;
+          font: 400 20px "Calibri", "Arial";
+          padding: 0px;
+		      padding-top: 0px;
+          padding-bottom: 25px;
+          margin: 0px;
+        }
+
+        blockquote {
+          color: white;
+          text-align: center;
+        }
+
+        .totals {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end; /* ensures all children align right */
+          margin-right: 40px;
+          margin-bottom: 30px;
+          gap: 4px; /* consistent spacing between lines */
+        }
+
+        .totals h2 {
+          padding-right: 20px;
+          font-size: 22px;
+          margin: 0px;
+          font-weight: bold;
+        }
+
+        header {
+          width: 100%;
+          background-color: #FFED86;
+          display: flex;
+          align-items: center;
+          border-bottom: 2px solid #E3F1D5;
+        }
+
+        .header-left {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-left: 10px;
+        }
+
+        .logo {
+          height: 80px;
+          width: auto;
+          margin-left: 10px; /* replaces padding */
+          padding: 10px;
+        }
+
+
+        .title {
+          font-size: 25px;
+          font-weight: bold;
+          color: #333;
+          font-family: 'Segoe UI', Calibri, sans-serif;
+        }
+
+        .header-right .nav-link {
+          margin-right: 30px;
+          font-size: 24px;
+          color: #333;
+          text-decoration: none;
+          border: 1px solid;
+          padding: 8px 16px;
+          border-radius: 4px;
+          background-color: rgb(241, 190, 128);
+          font-weight: 500;
+          transition: color 0.3s ease;
+        }
+
+        .header-right .nav-link:hover {
+          color: #cc8800;
+        }
+
+        .confirm {
+          margin-left: 20px;
+        }
+
+        .btn-back {
+          font-size: 18px;
+          color: #0066cc;
+          text-decoration: none;
+          border: 1px solid #0066cc;
+          padding: 8px 16px;
+          margin: 20px;
+          border-radius: 4px;
+          background-color: #f0f8ff;
+          transition: background-color 0.3s ease;
+        }
+
+        .btn-back:hover {
+          background-color: #dbeeff;
+        }
+
+        p {
+          font-size: 18px;
+          margin-left: 20px;
+          font-weight: bold;
+        }

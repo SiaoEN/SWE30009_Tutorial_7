@@ -1,0 +1,162 @@
+div{
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+        }
+
+table {
+    border-spacing: 1;
+    border: 1px solid;
+    border-collapse: collapse;
+    background: rgb(255, 209, 209);
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+        }
+        table * {
+          position: relative;
+        }
+        table td, table th {
+          padding-left: 8px;
+        }
+        table td{
+          height: 80px;
+        }
+        table thead tr {
+          height: 40px;
+          background: #ffa0a8;
+          font-size: 20px;
+        }
+        table tbody tr {
+          height: 48px;
+          border-bottom: 1px solid #ffa9cb;
+        }
+        table tbody tr:last-child {
+          border: 0;
+        }
+        table td, table th {
+          text-align: left;
+        }
+        table td.l, table th.l {
+          text-align: right;
+        }
+        table td.c, table th.c {
+          text-align: center;
+        }
+        table td.r, table th.r {
+          text-align: center;
+        }
+
+        @media screen and (max-width: 35.5em) {
+          table {
+            display: block;
+          }
+          table > *, table tr, table td, table th {
+            display: block;
+          }
+          table thead {
+            display: none;
+          }
+          table tbody tr {
+            height: auto;
+            padding: 8px 0;
+          }
+          table tbody tr td {
+            padding-left: 45%;
+            margin-bottom: 12px;
+          }
+          table tbody tr td:last-child {
+            margin-bottom: 0;
+          }
+          table tbody tr td:before {
+            position: absolute;
+            font-weight: 700;
+            width: 40%;
+            left: 10px;
+            top: 0;
+          }
+           table tbody tr td:nth-child(1):before {
+             content: "Code";
+           }
+           table tbody tr td:nth-child(2):before {
+           content: "Stock";
+           }
+           table tbody tr td:nth-child(3):before {
+           content: "Cap";
+           }
+           table tbody tr td:nth-child(4):before {
+             content: "Inch";
+           }
+           table tbody tr td:nth-child(5):before {
+             content: "Box Type";
+           }
+        }
+
+        body {
+          background: #aeebff;
+          font: 400 20px "Calibri", "Arial";
+          padding: 0px;
+		      padding-top: 0px;
+          padding-bottom: 25px;
+          margin: 0px;
+        }
+
+        blockquote {
+          color: white;
+          text-align: center;
+        }
+
+        header {
+          width: 100%;
+          background-color: #FFED86;
+          display: flex;
+          align-items: center;
+          border-bottom: 2px solid #E3F1D5;
+        }
+
+        .header-left {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-left: 10px;
+        }
+
+        .logo {
+          height: 80px;
+          width: auto;
+          margin-left: 10px; /* replaces padding */
+          padding: 10px;
+        }
+
+
+        .title {
+          font-size: 25px;
+          font-weight: bold;
+          color: #333;
+          font-family: 'Segoe UI', Calibri, sans-serif;
+        }
+
+        .application {
+          margin-left: 20px;
+        }
+
+        button {
+          font-size: 18px;
+          color: #cc0e00;
+          text-decoration: none;
+          border: 1px solid #cc0e00;
+          padding: 8px 16px;
+          margin: 20px;
+          border-radius: 4px;
+          background-color: #ffe6e6;
+          transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+          background-color: #f9a4a4;
+        }
